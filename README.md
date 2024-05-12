@@ -20,30 +20,97 @@ To write a program to perform linear search and binary search using python progr
 i)	#Use a linear search method to match the item in a list.
 ```
 
+Developed by: SADHANA SHREE B
+Register Number: 212223230177
+
+     def binary(array,k,low,high):
+    while low <= high:
+        mid = low + (high - low) // 2
+        if array[mid] == k:
+            return mid
+        elif array[mid] < k:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+array = eval(input())
+array.sort()
+k=eval(input())
+result = binary(array,k,0,len(array)-1)
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+#Developed by: SADHANA SHREE B
+#Register number: 212223230177
 
-
-
-
+def bin_srh_iter(arr,k,low,high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if (arr[mid]==k):
+            return mid
+        elif (arr[mid]<k):
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+arr=eval(input())
+k=eval(input())
+arr.sort()
+res=bin_srh_iter(arr,k,0,len(arr)-1)
+if (res==-1):
+    print(arr)
+    print("Element not found")
+else:
+    print(arr)
+    print("Element found at index: ",res)
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+#Developed by: SADHANA SHREE B
+#Register number: 212223230177
 
-
-
-
+def bin_srh_rec(arr,k,low,high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if (arr[mid]==k):
+            return mid
+        elif (arr[mid]>k):
+            return bin_srh_rec(arr,k,low,mid-1)
+        else:
+            return bin_srh_rec(arr,k,mid+1,high)
+    else:
+        return -1
+arr=eval(input())
+k=eval(input())
+arr.sort()
+res=bin_srh_rec(arr,k,0,len(arr)-1)
+if (res==-1):
+    print(arr)
+    print("Element not found")
+else:
+    print(arr)
+    print("Element found at index: ",res)
 
 ```
 ## Sample Input and Output
+### i) Use a linear search method to match the item in a list.
+![Screenshot 2024-05-12 110040](https://github.com/SadhanaShreee/Search-Algorithms/assets/144517664/ba8cbb4a-bb68-4b9a-824e-bbbe7961ae06)
 
 
+### ii) Find the element in a list using Binary Search(Iterative Method).
+![Screenshot 2024-05-12 110158](https://github.com/SadhanaShreee/Search-Algorithms/assets/144517664/98ab557c-0b2c-48f1-9bd4-d83cfcb17b62)
 
-
+### iii) Find the element in a list using Binary Search (recursive Method).
+![Screenshot 2024-05-12 110118](https://github.com/SadhanaShreee/Search-Algorithms/assets/144517664/e2722f8b-8abe-4dc1-9006-9c2a823be30a)
 
 
 ## Result
